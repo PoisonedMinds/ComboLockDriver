@@ -1,42 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package combolockdriver;
 
 /**
- *
+ * @title ComboLockDriver
  * @author Steven Biro
+ * @teacher Mr. J. Carron
+ * @date 9-Mar-2015 10:59:59 AM
+ * @purpose The purpose of this program is to model a combo lock
  */
 public class ComboLock {
 
     private int num1, num2, num3;
-
+    //randomly generate the combo between 1 and 3
     ComboLock() {
         num1 = (int) (Math.random() * 3 + 1);
         num2 = (int) (Math.random() * 3 + 1);
         num3 = (int) (Math.random() * 3 + 1);
     }
-
+    //generate the combo using user input
     ComboLock(int n1, int n2, int n3) {
         num1 = n1;
         num2 = n2;
         num3 = n3;
     }
-
-    int openLock(int n1, int n2, int n3) {
-        int output = 0;
-        if (n1 == num1) {
-            if (n2 == num2) {
-                if (n3 == num3) {
-                    output = 1;
-                }
-            }
-        }
-        return output;
-    }
-
+    //method to return the combo
     String getCombo() {
         String output = num1 + ", " + num2 + ", " + num3;
         return output;
